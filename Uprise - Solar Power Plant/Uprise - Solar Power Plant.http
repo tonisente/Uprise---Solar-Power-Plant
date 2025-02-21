@@ -1,0 +1,6 @@
+@Uprise___Solar_Power_Plant_HostAddress = http://localhost:5211
+
+GET {{Uprise___Solar_Power_Plant_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

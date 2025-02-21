@@ -1,0 +1,42 @@
+C:\Users\tonis\Development\Uprise - Solar Power Plant\User Auth\bin\Debug\net9.0\appsettings.Development.json
+C:\Users\tonis\Development\Uprise - Solar Power Plant\User Auth\bin\Debug\net9.0\appsettings.json
+C:\Users\tonis\Development\Uprise - Solar Power Plant\User Auth\bin\Debug\net9.0\User Auth.staticwebassets.endpoints.json
+C:\Users\tonis\Development\Uprise - Solar Power Plant\User Auth\bin\Debug\net9.0\User Auth.exe
+C:\Users\tonis\Development\Uprise - Solar Power Plant\User Auth\bin\Debug\net9.0\User Auth.deps.json
+C:\Users\tonis\Development\Uprise - Solar Power Plant\User Auth\bin\Debug\net9.0\User Auth.runtimeconfig.json
+C:\Users\tonis\Development\Uprise - Solar Power Plant\User Auth\bin\Debug\net9.0\User Auth.dll
+C:\Users\tonis\Development\Uprise - Solar Power Plant\User Auth\bin\Debug\net9.0\User Auth.pdb
+C:\Users\tonis\Development\Uprise - Solar Power Plant\User Auth\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\tonis\Development\Uprise - Solar Power Plant\User Auth\bin\Debug\net9.0\Microsoft.AspNetCore.OpenApi.dll
+C:\Users\tonis\Development\Uprise - Solar Power Plant\User Auth\bin\Debug\net9.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\tonis\Development\Uprise - Solar Power Plant\User Auth\bin\Debug\net9.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\tonis\Development\Uprise - Solar Power Plant\User Auth\bin\Debug\net9.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\tonis\Development\Uprise - Solar Power Plant\User Auth\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\tonis\Development\Uprise - Solar Power Plant\User Auth\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\tonis\Development\Uprise - Solar Power Plant\User Auth\bin\Debug\net9.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\tonis\Development\Uprise - Solar Power Plant\User Auth\bin\Debug\net9.0\Microsoft.OpenApi.dll
+C:\Users\tonis\Development\Uprise - Solar Power Plant\User Auth\bin\Debug\net9.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\tonis\Development\Uprise - Solar Power Plant\User Auth\obj\Debug\net9.0\User Auth.csproj.AssemblyReference.cache
+C:\Users\tonis\Development\Uprise - Solar Power Plant\User Auth\obj\Debug\net9.0\User Auth.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\tonis\Development\Uprise - Solar Power Plant\User Auth\obj\Debug\net9.0\User Auth.AssemblyInfoInputs.cache
+C:\Users\tonis\Development\Uprise - Solar Power Plant\User Auth\obj\Debug\net9.0\User Auth.AssemblyInfo.cs
+C:\Users\tonis\Development\Uprise - Solar Power Plant\User Auth\obj\Debug\net9.0\User Auth.csproj.CoreCompileInputs.cache
+C:\Users\tonis\Development\Uprise - Solar Power Plant\User Auth\obj\Debug\net9.0\User Auth.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\tonis\Development\Uprise - Solar Power Plant\User Auth\obj\Debug\net9.0\User Auth.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\tonis\Development\Uprise - Solar Power Plant\User Auth\obj\Debug\net9.0\scopedcss\bundle\User Auth.styles.css
+C:\Users\tonis\Development\Uprise - Solar Power Plant\User Auth\obj\Debug\net9.0\staticwebassets.build.json
+C:\Users\tonis\Development\Uprise - Solar Power Plant\User Auth\obj\Debug\net9.0\staticwebassets.development.json
+C:\Users\tonis\Development\Uprise - Solar Power Plant\User Auth\obj\Debug\net9.0\staticwebassets.build.endpoints.json
+C:\Users\tonis\Development\Uprise - Solar Power Plant\User Auth\obj\Debug\net9.0\staticwebassets\msbuild.User Auth.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\tonis\Development\Uprise - Solar Power Plant\User Auth\obj\Debug\net9.0\staticwebassets\msbuild.User Auth.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+C:\Users\tonis\Development\Uprise - Solar Power Plant\User Auth\obj\Debug\net9.0\staticwebassets\msbuild.build.User Auth.props
+C:\Users\tonis\Development\Uprise - Solar Power Plant\User Auth\obj\Debug\net9.0\staticwebassets\msbuild.buildMultiTargeting.User Auth.props
+C:\Users\tonis\Development\Uprise - Solar Power Plant\User Auth\obj\Debug\net9.0\staticwebassets\msbuild.buildTransitive.User Auth.props
+C:\Users\tonis\Development\Uprise - Solar Power Plant\User Auth\obj\Debug\net9.0\staticwebassets.pack.json
+C:\Users\tonis\Development\Uprise - Solar Power Plant\User Auth\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
+C:\Users\tonis\Development\Uprise - Solar Power Plant\User Auth\obj\Debug\net9.0\User Auth.csproj.Up2Date
+C:\Users\tonis\Development\Uprise - Solar Power Plant\User Auth\obj\Debug\net9.0\User Auth.dll
+C:\Users\tonis\Development\Uprise - Solar Power Plant\User Auth\obj\Debug\net9.0\refint\User Auth.dll
+C:\Users\tonis\Development\Uprise - Solar Power Plant\User Auth\obj\Debug\net9.0\User Auth.pdb
+C:\Users\tonis\Development\Uprise - Solar Power Plant\User Auth\obj\Debug\net9.0\User Auth.genruntimeconfig.cache
+C:\Users\tonis\Development\Uprise - Solar Power Plant\User Auth\obj\Debug\net9.0\ref\User Auth.dll

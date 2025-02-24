@@ -23,7 +23,7 @@ public static class UserEndpoints
             }
 
             var user = await authService.RegisterAsync(userDTO);
-
+            
             if (user == null)
             {
                 return Results.BadRequest();
@@ -48,10 +48,10 @@ public static class UserEndpoints
             return Results.Ok(jwtToken);
         });
 
-        group.MapGet("/authTest", () =>
-        {
-            return Results.Ok("Authenticated!");
-        }).RequireAuthorization();
+        //group.MapGet("/authTest", () =>
+        //{
+        //    return Results.Ok("Authenticated!");
+        //}).RequireAuthorization();
 
         return group;
     }

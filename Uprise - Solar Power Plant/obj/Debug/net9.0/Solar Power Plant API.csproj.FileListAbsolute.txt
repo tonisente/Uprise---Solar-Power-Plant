@@ -173,3 +173,13 @@ C:\Users\tonis\Development\Uprise - Solar Power Plant\Uprise - Solar Power Plant
 C:\Users\tonis\Development\Uprise - Solar Power Plant\Uprise - Solar Power Plant\bin\Debug\net9.0\Mapster.dll
 C:\Users\tonis\Development\Uprise - Solar Power Plant\Uprise - Solar Power Plant\bin\Debug\net9.0\Mapster.Core.dll
 C:\Users\tonis\Development\Uprise - Solar Power Plant\Uprise - Solar Power Plant\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\tonis\Development\Uprise - Solar Power Plant\Uprise - Solar Power Plant\obj\Debug\net9.0\Solar Power Plant API.sourcelink.json
+C:\Users\tonis\Development\Uprise - Solar Power Plant\Uprise - Solar Power Plant\bin\Debug\net9.0\Serilog.dll
+C:\Users\tonis\Development\Uprise - Solar Power Plant\Uprise - Solar Power Plant\bin\Debug\net9.0\Serilog.AspNetCore.dll
+C:\Users\tonis\Development\Uprise - Solar Power Plant\Uprise - Solar Power Plant\bin\Debug\net9.0\Serilog.Extensions.Hosting.dll
+C:\Users\tonis\Development\Uprise - Solar Power Plant\Uprise - Solar Power Plant\bin\Debug\net9.0\Serilog.Extensions.Logging.dll
+C:\Users\tonis\Development\Uprise - Solar Power Plant\Uprise - Solar Power Plant\bin\Debug\net9.0\Serilog.Formatting.Compact.dll
+C:\Users\tonis\Development\Uprise - Solar Power Plant\Uprise - Solar Power Plant\bin\Debug\net9.0\Serilog.Settings.Configuration.dll
+C:\Users\tonis\Development\Uprise - Solar Power Plant\Uprise - Solar Power Plant\bin\Debug\net9.0\Serilog.Sinks.Console.dll
+C:\Users\tonis\Development\Uprise - Solar Power Plant\Uprise - Solar Power Plant\bin\Debug\net9.0\Serilog.Sinks.Debug.dll
+C:\Users\tonis\Development\Uprise - Solar Power Plant\Uprise - Solar Power Plant\bin\Debug\net9.0\Serilog.Sinks.File.dll

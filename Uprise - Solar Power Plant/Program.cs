@@ -3,18 +3,18 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Scalar.AspNetCore;
+using Serilog;
 using System.Text;
 using Uprise___Solar_Power_Plant.Data;
 using Uprise___Solar_Power_Plant.Endpoints;
 using Uprise___Solar_Power_Plant.Models;
-using Uprise___Solar_Power_Plant.Security;
 using Uprise___Solar_Power_Plant.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddDbContext<SolarPowerPlantDbContext>(options =>
 {
-options.UseSqlServer("Server=localhost\\SQLEXPRESS;Database=SolarPowerPlant;Trusted_Connection=True;TrustServerCertificate=True;")
+options.UseSqlServer(builder.Configuration.GetValue<string>("DB:ConnectionString"))
        .UseAsyncSeeding(async (context, _, ct) =>
        {    // seed Power Plants
            var shouldSeed = !await context.Set<PowerPlant>().AnyAsync();
@@ -32,8 +32,8 @@ options.UseSqlServer("Server=localhost\\SQLEXPRESS;Database=SolarPowerPlant;Trus
                 .RuleFor(x => x.LocationLatitude, f => random.Next(-90, 90) * random.NextDouble())
                 .RuleFor(x => x.LocationLongitude, f => random.Next(-180, 180) * random.NextDouble());
 
-            var moviesToSeed = faker.Generate(20);
-            context.Set<PowerPlant>().AddRange(moviesToSeed);
+            var powerPlants = faker.Generate(builder.Configuration.GetValue<int>("Seeding:PowerPlants"));
+            context.Set<PowerPlant>().AddRange(powerPlants);
             await context.SaveChangesAsync();
        })
        .UseAsyncSeeding(async (context, _, ct) => 
@@ -54,7 +54,7 @@ options.UseSqlServer("Server=localhost\\SQLEXPRESS;Database=SolarPowerPlant;Trus
                                   .AddHours(-random.Next(1, 24)) // Randomize start hour
                                   .AddMinutes(-random.Next(1, 60)); // Randomize start minute
 
-               var readings = Enumerable.Range(0, 4)
+               var readings = Enumerable.Range(0, builder.Configuration.GetValue<int>("Seeding:ReadingsPerPlant"))
                    .Select(i => new PowerPlantReading
                    {
                        PowerPlant = plant,
@@ -85,8 +85,8 @@ options.UseSqlServer("Server=localhost\\SQLEXPRESS;Database=SolarPowerPlant;Trus
                 .RuleFor(x => x.LocationLatitude, f => random.Next(-90, 90) * random.NextDouble())
                 .RuleFor(x => x.LocationLongitude, f => random.Next(-180, 180) * random.NextDouble());
 
-            var moviesToSeed = faker.Generate(20);
-            context.Set<PowerPlant>().AddRange(moviesToSeed);
+            var powerPlants = faker.Generate(builder.Configuration.GetValue<int>("Seeding:PowerPlants"));
+            context.Set<PowerPlant>().AddRange(powerPlants);
             context.SaveChanges();
         })
        .UseSeeding((context, _) =>
@@ -106,8 +106,7 @@ options.UseSqlServer("Server=localhost\\SQLEXPRESS;Database=SolarPowerPlant;Trus
                var startTime = now.AddDays(-random.Next(1, 30)) // Start any time in the past month
                                   .AddHours(-random.Next(1, 24)) // Randomize start hour
                                   .AddMinutes(-random.Next(1, 60)); // Randomize start minute
-
-               var readings = Enumerable.Range(0, 4)
+               var readings = Enumerable.Range(0, builder.Configuration.GetValue<int>("Seeding:ReadingsPerPlant"))
                    .Select(i => new PowerPlantReading
                    {
                        PowerPlant = plant,
@@ -125,11 +124,10 @@ options.UseSqlServer("Server=localhost\\SQLEXPRESS;Database=SolarPowerPlant;Trus
 
 builder.Services.AddScoped<AuthService>();
 
-// Add services to the container.
-
 builder.Services.AddControllers().AddNewtonsoftJson(options =>
     options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
 );
+
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
 
@@ -148,10 +146,17 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
         };
     });
 
-// Singletons
-//builder.Services.AddSingleton<JWTTokenGenerator>();
-
 var app = builder.Build();
+
+
+// Logger configuration
+var file = builder.Configuration.GetValue<string>("Logging:FilePath");
+Log.Logger = (Serilog.ILogger)new LoggerConfiguration()
+    .WriteTo.Console()
+    .WriteTo.File(
+        file,
+        rollingInterval: RollingInterval.Day)
+    .CreateLogger();
 
 // preparation for seeding
 await using (var serviceScope = app.Services.CreateAsyncScope())
@@ -174,7 +179,8 @@ app.UseAuthorization();
 
 app.MapControllers();
 
-app.MapGroup("/api/powerplant").MapPowerPlantEndopoints();
+app.MapGroup("/api/powerplant").MapPowerPlantEndopoints().RequireAuthorization();
+//app.MapGroup("/api/powerplant").MapPowerPlantEndopoints();
 app.MapGroup("/api/user").MapUserEndpoints();
 
 app.Run();
